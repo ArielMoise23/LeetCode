@@ -35,10 +35,8 @@ class Solution:
       finalWord = ""
       while not finalWord and wordsList:
          finalWord = wordsList.pop(-1)
-      if finalWord:
-         return len(finalWord)
-      else:
-         return 0
+
+      return len(finalWord)
 
 
 ## check:
