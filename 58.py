@@ -31,8 +31,18 @@ There will be at least one word in s.
 
 class Solution:
    def lengthOfLastWord(self, s: str) -> int:
-       lastWord = str.split(" ")
-      
+      wordsList = s.split(" ")
+      finalWord = ""
+      while not finalWord and wordsList:
+         finalWord = wordsList.pop(-1)
+      if finalWord:
+         return len(finalWord)
+      else:
+         return 0
 
-Solution.lengthOfLastWord("hi im ariel")
-Solution.lengthOfLastWord("  gola  ji  koll  ")
+
+## check:
+
+solu = Solution()
+solu.lengthOfLastWord("hi im ariel")
+solu.lengthOfLastWord("  gola  ji  koll  ")
