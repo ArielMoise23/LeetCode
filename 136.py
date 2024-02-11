@@ -26,13 +26,13 @@ Constraints:
 Each element in the array appears twice except for one element which appears only once.
 """
 
-def singleNumber(nums: list[int]) -> int:
-    listOfNumber = [int]
+def singleNumber(nums):
+    listOfNumber = []
     for num in nums:
         if num in listOfNumber:
             listOfNumber.remove(num)
         else: listOfNumber.append(num)
     if len(listOfNumber) == 1:
-        return listOfnumber.pop()
+        return listOfNumber.pop()
 
 print(singleNumber([2,2,3,3,1]))
